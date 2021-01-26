@@ -39,6 +39,7 @@ namespace Lab3MusicPlaylist
             this.ArtistHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlbumHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenreHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,8 +88,10 @@ namespace Lab3MusicPlaylist
             // 
             // buttonAdd
             // 
+            this.helpProvider1.SetHelpString(this.buttonAdd, "");
             this.buttonAdd.Location = new System.Drawing.Point(12, 26);
             this.buttonAdd.Name = "buttonAdd";
+            this.helpProvider1.SetShowHelp(this.buttonAdd, true);
             this.buttonAdd.Size = new System.Drawing.Size(189, 43);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Add Selected Song";
@@ -160,11 +163,17 @@ namespace Lab3MusicPlaylist
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 390);
             this.Controls.Add(this.splitContainer1);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpString(this, "You can only have one unique song per playlist, otherwise it won\'t be added.");
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1050, 632);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(664, 429);
             this.Name = "AddTrackForm";
+            this.helpProvider1.SetShowHelp(this, true);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ModifyPlaylistForm";
+            this.Text = "Add song to playlist";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -187,5 +196,6 @@ namespace Lab3MusicPlaylist
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxAddedSongs;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
