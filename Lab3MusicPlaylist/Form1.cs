@@ -79,6 +79,7 @@ namespace Lab3MusicPlaylist
                 dataGridView1.Rows[rowIndex].Cells["ArtistHeader"].Value = track.Track.Album.Artist.Name;
                 dataGridView1.Rows[rowIndex].Cells["AlbumHeader"].Value = track.Track.Album.Title;
                 dataGridView1.Rows[rowIndex].Cells["GenreHeader"].Value = track.Track.Genre.Name;
+                dataGridView1.Columns[0].Width = 22;
             }
         }
 
